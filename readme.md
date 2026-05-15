@@ -7,4 +7,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Pattern | Problems Solved |
 |----------|----------------|
 | Two Pointers | 1 |
-| Hashing | 1 |
+| Hashing | 2 |
