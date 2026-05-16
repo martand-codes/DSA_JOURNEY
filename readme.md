@@ -8,3 +8,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 |----------|----------------|
 | Two Pointers | 1 |
 | Hashing | 2 |
+| Divide And Conquer | 1 |
