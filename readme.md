@@ -7,6 +7,6 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Pattern | Problems Solved |
 |----------|----------------|
 | Two Pointers | 2 |
-| Hashing | 2 |
+| Hashing | 3 |
 | Divide And Conquer | 1 |
 | Dynammic Programming | 1 |
