@@ -10,5 +10,5 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Hashing | 4 |
 | Divide And Conquer | 4 |
 | Dynammic Programming | 4 |
-| Sliding Window | 1 |
+| Sliding Window | 2 |
 | Trie | 1 |
