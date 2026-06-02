@@ -13,3 +13,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Sliding Window | 2 |
 | Trie | 1 |
 | Greedy | 2 |
+| Maths | 1 |
