@@ -14,3 +14,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Trie | 1 |
 | Greedy | 2 |
 | Maths | 1 |
+| Strings | 1 |
