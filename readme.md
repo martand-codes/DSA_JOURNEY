@@ -15,3 +15,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Greedy | 2 |
 | Maths | 2 |
 | Strings | 1 |
+| Sorting | 1 |
