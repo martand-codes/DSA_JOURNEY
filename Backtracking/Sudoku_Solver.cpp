@@ -3,7 +3,6 @@
 // TC: O(9^(empty cells))
 // SC: O(empty cells)
 
-
 class Solution {
 public:
     bool solveSudoku(int sudoku[9][9], int row, int column) {
