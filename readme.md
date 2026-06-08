@@ -17,4 +17,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Strings | 1 |
 | Sorting | 1 |
 | Backtracking | 2 |
-| Linked List | 1 |
+| Linked List | 2 |
