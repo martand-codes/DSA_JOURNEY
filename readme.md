@@ -19,3 +19,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Backtracking | 2 |
 | Linked List | 2 |
 | Stack | 2 |
+| Queue | 1 |
