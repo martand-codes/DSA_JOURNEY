@@ -12,11 +12,11 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Dynammic Programming | 4 |
 | Sliding Window | 2 |
 | Trie | 1 |
-| Greedy | 2 |
+| Greedy | 5 |
 | Maths | 2 |
 | Strings |  |
 | Sorting | 2 |
 | Backtracking | 2 |
-| Linked List | 6 |
+| Linked List | 8 |
 | Stack | 4 |
 | Queue | 1 |
