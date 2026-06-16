@@ -14,10 +14,10 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Trie | 1 |
 | Greedy | 5 |
 | Maths | 2 |
-| Strings | 2 |
+| Strings | 3 |
 | Sorting | 2 |
 | Backtracking | 2 |
-| Linked List | 9 |
+| Linked List | 10 |
 | Stack | 4 |
 | Queue | 1 |
 | Tree | 2 |
