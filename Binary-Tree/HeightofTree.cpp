@@ -1,4 +1,4 @@
-// Height of Tree
+// Height of Tree also Same LOGIC for Find no of Nodes
 
 int height(Node* root) {
     // Base Case
