@@ -20,4 +20,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Linked List | 10 |
 | Stack | 4 |
 | Queue | 1 |
-| Tree | 6 |
+| Tree | 7 |
