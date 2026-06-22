@@ -21,3 +21,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Stack | 4 |
 | Queue | 1 |
 | Tree | 9 |
+| BST | 3 |
