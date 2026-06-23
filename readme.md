@@ -22,3 +22,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Queue | 1 |
 | Tree | 9 |
 | BST | 3 |
+| Heap | 2 |
