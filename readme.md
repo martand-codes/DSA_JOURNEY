@@ -23,3 +23,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Tree | 9 |
 | BST | 3 |
 | Heap | 2 |
+| Prefix Sum | 1 |
