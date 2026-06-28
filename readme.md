@@ -12,7 +12,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Dynammic Programming | 4 |
 | Sliding Window | 2 |
 | Trie | 1 |
-| Greedy | 6 |
+| Greedy | 7 |
 | Maths | 4 |
 | Strings | 4 |
 | Sorting | 2 |
