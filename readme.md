@@ -24,3 +24,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | BST | 3 |
 | Heap | 2 |
 | Prefix Sum | 2 |
+| Graphs | 1 |
