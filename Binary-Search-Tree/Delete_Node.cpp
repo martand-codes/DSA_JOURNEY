@@ -65,3 +65,58 @@ Node* deleteNode(Node* root, int value) {
 
     return root;
 }
+
+class Solution {
+public:
+    TreeNode* deleteNode(TreeNode* root, int key) {
+        // Base Case: No Root!
+        if (root == nullptr) {
+            return nullptr;
+        }
+
+        // Rule Of BST go (search) left and right
+        if (key < root->val) {
+            root->left = deleteNode(root->left, key);
+        }
+        else if (key > root->val) {
+            root->right = deleteNode(root->right, key);
+        }
+        
+        // --- PHASE 2: DELETE ---
+        // We found the node! (key == root->val)
+        else {
+            // For 0 and 1 child
+            if(root->left == nullptr) { // Memory empty in left
+                // Making a temporary node
+                TreeNode* temporary = root->right;
+                delete root; // Freeing the memory
+                return temporary;
+            }
+            // Same for Right Child!
+            else if (root->right == nullptr) {
+                TreeNode* temporary = root->left;
+                delete root;
+                return temporary;
+            }
+            
+            // For 2 children
+            // First find the inorder successor (smallest node on the right side)
+            TreeNode* successor = findMin(root->right);
+            
+            // Secondly Copy successor value to root value
+            root->val = successor->val;
+            
+            // Third Delete
+            root->right = deleteNode(root->right, successor->val);
+        }
+        
+        return root;
+    }
+    // F(x) for finding the inorder successor
+    TreeNode* findMin(TreeNode* node) {
+        while (node->left != nullptr) {
+            node = node->left;
+        }
+        return node;
+    }
+};
