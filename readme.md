@@ -21,7 +21,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Stack | 4 |
 | Queue | 1 |
 | Binary Trees | 15 |
-| Binary Search Trees | 4 |
+| Binary Search Trees | 5 |
 | Heap | 2 |
 | Prefix Sum | 2 |
 | Graphs | 1 |
