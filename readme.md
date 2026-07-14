@@ -20,8 +20,8 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Linked List | 10 |
 | Stack | 4 |
 | Queue | 1 |
-| Binary Trees | 19 |
-| Binary Search Trees | 5 |
+| Binary Trees | 20 |
+| Binary Search Trees | 7 |
 | Heap | 2 |
 | Prefix Sum | 2 |
 | Graphs | 1 |
