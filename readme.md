@@ -13,7 +13,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Sliding Window | 2 |
 | Trie | 1 |
 | Greedy | 7 |
-| Maths | 4 |
+| Maths | 5 |
 | Strings | 4 |
 | Sorting | 2 |
 | Backtracking | 21 |
