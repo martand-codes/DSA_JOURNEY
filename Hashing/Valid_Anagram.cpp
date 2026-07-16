@@ -51,3 +51,29 @@ public:
         return true;
     }
 };
+
+// Solved Using Hashing
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        // Base Case:
+        if(s.size() != t.size()) {
+            return false;
+        }
+        unordered_map<char, int> frequency; // We will First insert the frequencies of string s
+        for(int i = 0; i < s.size(); i++){
+            frequency[s[i]]++;
+        }
+        // Now Checking string t from hashed table of s
+        for(int i = 0; i < t.size(); i++) {
+            if(frequency.count(t[i]) == 0) {
+                return false;
+            }
+            frequency[t[i]]--;
+            if(frequency[t[i]] == 0) {
+                frequency.erase(t[i]);
+            } 
+        }
+        return true;
+    }
+};
