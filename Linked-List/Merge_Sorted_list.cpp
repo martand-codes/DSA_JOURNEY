@@ -1,35 +1,51 @@
+/*
+------------------------------------------------------------
+Problem : Merge Two Sorted Lists (LeetCode 21)
+Pattern : Linked List
+
+Time Complexity : O(N + M)
+Space Complexity : O(1)
+
+Idea:
+- Use a dummy/sentinel node to simplify construction
+  of the merged linked list.
+- Maintain a tail pointer representing the last node
+  in the merged list.
+- Compare the current nodes of both lists.
+- Attach the smaller node to tail and advance that list.
+- Continue until one list is exhausted.
+- Attach the remaining portion of the other list directly.
+
+Key Insight:
+Because both lists are already sorted, at every step
+the smaller current node must be the next node in the
+merged list. The existing nodes can be reused directly,
+so no additional nodes are required.
+
+------------------------------------------------------------
+*/
+
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        // 1. Setup the Dummy Node and Tail pointer
-        ListNode* dummy = new ListNode(0);
-        ListNode* tail = dummy;
-        
-        // 2. The Zipper Loop
-        while (list1 != nullptr && list2 != nullptr) {
-            if (list1->val <= list2->val) {
+        ListNode newList(0);
+        ListNode* tail = &newList;
+
+        while(list1 != nullptr && list2 != nullptr) {
+            if(list1->val <= list2->val) {
                 tail->next = list1;
                 list1 = list1->next;
             } else {
                 tail->next = list2;
                 list2 = list2->next;
             }
-            
-            // Move the tail forward
             tail = tail->next;
         }
-        
-        // 3. Attach the leftovers
-        if (list1 != nullptr) {
+        if(list1 != nullptr) {
             tail->next = list1;
         } else {
             tail->next = list2;
         }
-        
-        // 4. Safely extract the real head and clean up the dummy node
-        ListNode* head = dummy->next;
-        delete dummy; 
-        
-        return head;
+        return newList.next;
     }
 };
