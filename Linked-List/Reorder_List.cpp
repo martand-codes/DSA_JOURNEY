@@ -1,19 +1,44 @@
-// Problem: Reorder List
-// Pattern: Fast & Slow Pointers + Linked List Reversal + Merging
-// TC: O(n)
-// SC: O(1)
-//
-// Idea:
-// 1. Find the middle of the linked list.
-// 2. Reverse the second half.
-// 3. Merge the two halves alternately.
-//
-// Example:
-// 1 -> 2 -> 3 -> 4 -> 5
-//
-// Becomes:
-//
-// 1 -> 5 -> 2 -> 4 -> 3
+/*
+------------------------------------------------------------
+Problem : Reorder List (LeetCode 143)
+Pattern : Linked List / Fast & Slow Pointers
+
+Time Complexity : O(N)
+Space Complexity : O(1)
+
+Idea:
+- Use slow and fast pointers to find the middle of
+  the linked list.
+- Split the list into two halves.
+- Reverse the second half in-place.
+- Merge the two halves alternately.
+
+Example:
+1 → 2 → 3 → 4 → 5
+
+First half:
+1 → 2 → 3
+
+Second half:
+4 → 5
+
+Reverse:
+5 → 4
+
+Merge:
+1 → 5 → 2 → 4 → 3
+
+Key Insight:
+The problem combines three fundamental linked-list
+techniques:
+1. Fast/slow pointers to find the middle.
+2. In-place pointer reversal.
+3. Alternating merge of two linked lists.
+
+No additional data structure is required, allowing
+the solution to achieve O(1) extra space.
+------------------------------------------------------------
+*/
 
 class Solution {
 public:
