@@ -1,12 +1,36 @@
-// Problem: Reverse Linked List II
-// Pattern: Linked List + In-Place Reversal
-// TC: O(n)
-// SC: O(1)
+/*
+------------------------------------------------------------
+Problem : Reverse Linked List II (LeetCode 92)
+Pattern : Linked List / Pointer Reversal
 
-// Idea:
-// 1. Reach the left position.
-// 2. Reverse nodes from left to right.
-// 3. Reconnect the reversed section with the first and last parts.
+Time Complexity : O(N)
+Space Complexity : O(1)
+
+Idea:
+- Traverse to the node at the `left` position while keeping
+  track of the node immediately before it.
+- Reverse only the portion of the list from `left` to `right`
+  using the standard linked-list reversal technique.
+- Reconnect the reversed section with the first and remaining
+  portions of the list.
+- Handle the special case where `left == 1`, meaning the head
+  itself belongs to the reversed section.
+
+Key Insight:
+The standard linked-list reversal algorithm can be applied
+to only a selected portion of the list. The original first
+node of the reversed section becomes its tail after reversal,
+allowing it to be connected to the remaining list.
+
+Example:
+1 → 2 → 3 → 4 → 5
+left = 2, right = 4
+
+After reversal:
+1 → 4 → 3 → 2 → 5
+
+------------------------------------------------------------
+*/
 
 class Solution {
 public:
