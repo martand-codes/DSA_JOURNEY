@@ -14,7 +14,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Trie | 1 |
 | Greedy | 20 |
 | Maths | 5 |
-| Strings | 4 |
+| Strings | 5 |
 | Sorting | 2 |
 | Backtracking | 21 |
 | Linked List | 17 |
@@ -26,3 +26,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Prefix Sum | 2 |
 | Graphs | 20 |
 | Bit Manipulation | 10 |
+| Arrays | 2 |
