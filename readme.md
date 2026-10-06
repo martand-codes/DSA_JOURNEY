@@ -28,3 +28,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Bit Manipulation | 10 |
 | Arrays | 6 |
 | Intervals | 7 |
+| Binary Search | 4 |
