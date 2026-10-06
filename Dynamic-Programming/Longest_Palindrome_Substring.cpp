@@ -54,3 +54,86 @@ public:
         return s.substr(start, maxLength);
     }
 };
+
+// Middle Approach
+class Solution {
+public:
+
+    pair<int, int> expand(string& s, int left, int right) {
+        while (left >= 0 && right < s.size() && s[left] == s[right]) {
+            left--;
+            right++;
+        }
+
+        // We went one step too far on both sides
+        return {left + 1, right - left - 1};
+    }
+
+    string longestPalindrome(string s) {
+        int n = s.size();
+
+        if (n == 0) return "";
+
+        int start = 0;
+        int maxLength = 1;
+
+        for (int i = 0; i < n; i++) {
+
+            // Odd-length palindrome
+            auto [start1, length1] = expand(s, i, i);
+
+            // Even-length palindrome
+            auto [start2, length2] = expand(s, i, i + 1);
+
+            if (length1 > maxLength) {
+                start = start1;
+                maxLength = length1;
+            }
+
+            if (length2 > maxLength) {
+                start = start2;
+                maxLength = length2;
+            }
+        }
+
+        return s.substr(start, maxLength);
+    }
+};
+
+// 1D 
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        int n = s.size();
+
+        if (n == 0) return "";
+
+        vector<bool> dp(n, false);
+
+        int start = 0;
+        int maxLength = 1;
+
+        for (int i = n - 1; i >= 0; i--) {
+
+            for (int j = i; j < n; j++) {
+
+                if (s[i] == s[j]) {
+
+                    if (j - i <= 1 || dp[j - 1]) {
+                        dp[j] = true;
+
+                        if (j - i + 1 > maxLength) {
+                            start = i;
+                            maxLength = j - i + 1;
+                        }
+                    }
+                }
+                else {
+                    dp[j] = false;
+                }
+            }
+        }
+
+        return s.substr(start, maxLength);
+    }
+};
