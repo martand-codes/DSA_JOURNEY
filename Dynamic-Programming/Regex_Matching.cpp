@@ -1,8 +1,42 @@
-// Problem: Regular Expression Matching
-// Pattern: Dynamic Programming
-// TC: O(m * n)
-// SC: O(m * n)
+/*
+------------------------------------------------------------
+Problem : Regular Expression Matching (LeetCode 10)
+Pattern : Dynamic Programming (2D String DP)
 
+Time Complexity : O(M * N)
+Space Complexity : O(M * N)
+
+Idea:
+- Create a DP table where dp[i][j] indicates whether the
+  first i characters of string s match the first j
+  characters of pattern p.
+- Initialize dp[0][0] = true because two empty strings match.
+- Handle patterns that can match an empty string, such as
+  a*, a*b*, or .*.
+- For each character pair:
+    - If the pattern character is '.' or matches the
+      current string character, inherit dp[i-1][j-1].
+    - If the pattern character is '*':
+        1. Match zero occurrences of the preceding character:
+           dp[i][j] = dp[i][j-2]
+        2. Match one or more occurrences if the preceding
+           pattern character matches s[i-1]:
+           dp[i][j] |= dp[i-1][j]
+
+Key Insight:
+The '*' character applies to the character immediately
+before it and represents zero or more occurrences.
+
+    dp[i][j-2]  → Use zero occurrences
+    dp[i-1][j]  → Use one more occurrence
+
+The '.' character matches any single character.
+
+By combining these transitions, the DP table considers
+all valid ways to match the string against the pattern.
+
+------------------------------------------------------------
+*/
 class Solution {
 public:
     bool isMatch(string s, string p) {
