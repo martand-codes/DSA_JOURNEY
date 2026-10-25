@@ -9,7 +9,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Two Pointers | 12 |
 | Hashing | 15 |
 | Divide And Conquer | 4 |
-| Dynammic Programming | 36 |
+| Dynammic Programming | 37 |
 | Sliding Window | 3 |
 | Trie | 1 |
 | Greedy | 23 |
