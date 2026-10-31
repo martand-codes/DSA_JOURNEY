@@ -1,7 +1,50 @@
-// Problem: Longest Substring Without Repeating Characters
-// Pattern: Sliding Window + Hashing
-// TC: O(n)
-// SC: O(min(n, charset))
+/*
+------------------------------------------------------------
+Problem : Longest Substring Without Repeating Characters
+          (LeetCode 3)
+
+Pattern : Hashing + Sliding Window + Two Pointers
+
+Time Complexity : O(N)
+Space Complexity : O(min(N, K))
+                   K = Character Set Size
+
+Idea:
+- Use an unordered_map to store each character's most
+  recently encountered index.
+- Maintain a sliding window using two pointers:
+    left  -> Start of the current valid window.
+    right -> End of the current valid window.
+- Traverse the string using the right pointer.
+- If the current character has appeared before and its
+  previous index is inside the current window:
+      Move left to the previous index + 1.
+- Update the character's latest index in the hash map.
+- Calculate the current window length and update max_len.
+
+Key Insight:
+The sliding window must always contain unique characters.
+
+The hash map allows us to jump directly past a repeated
+character instead of moving the left pointer one position
+at a time.
+
+The crucial condition is:
+
+    char_map[c] >= left
+
+It ensures that the previous occurrence belongs to the
+CURRENT window. An occurrence outside the window must
+not affect the left pointer.
+
+Window Length:
+
+    right - left + 1
+
+Each character is processed once, giving O(N) time.
+
+------------------------------------------------------------
+*/
 
 class Solution {
 public:
