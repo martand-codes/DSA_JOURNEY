@@ -7,7 +7,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Pattern | Problems Solved |
 |----------|----------------|
 | Two Pointers | 12 |
-| Hashing | 17 |
+| Hashing | 18 |
 | Divide And Conquer | 4 |
 | Dynammic Programming | 40 |
 | Sliding Window | 3 |
@@ -18,7 +18,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Sorting | 2 |
 | Backtracking | 21 |
 | Linked List | 17 |
-| Stack | 15 |
+| Stack | 16 |
 | Queue | 1 |
 | Binary Trees | 20 |
 | Binary Search Trees | 7 |
@@ -26,7 +26,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Prefix Sum | 2 |
 | Graphs | 23 |
 | Bit Manipulation | 10 |
-| Arrays | 7 |
+| Arrays | 9 |
 | Intervals | 7 |
 | Binary Search | 4 |
 | SQL | 10 | 
