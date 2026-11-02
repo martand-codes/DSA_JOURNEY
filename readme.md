@@ -26,7 +26,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Prefix Sum | 2 |
 | Graphs | 23 |
 | Bit Manipulation | 10 |
-| Arrays | 9 |
+| Arrays | 10 |
 | Intervals | 7 |
 | Binary Search | 4 |
 | SQL | 14 | 
