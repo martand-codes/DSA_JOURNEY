@@ -11,7 +11,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Divide And Conquer | 4 |
 | Dynammic Programming | 40 |
 | Sliding Window | 5 |
-| Trie | 1 |
+| Trie | 5 |
 | Greedy | 23 |
 | Maths | 6 |
 | Strings | 6 |
