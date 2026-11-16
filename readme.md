@@ -14,7 +14,7 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Trie | 5 |
 | Greedy | 23 |
 | Maths | 6 |
-| Strings | 6 |
+| Strings | 7 |
 | Sorting | 2 |
 | Backtracking | 21 |
 | Linked List | 17 |
