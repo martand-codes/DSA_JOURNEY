@@ -88,3 +88,52 @@ public:
     }
 
 };
+
+class Solution {
+public:
+    int islandPerimeter(vector<vector<int>>& grid) {
+        int rows = grid.size();
+        int cols = grid[0].size();
+        int perimeter = 0;
+
+        queue<pair<int, int>> q;
+
+        // Find the first land cell and mark it visited (-1)
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (grid[r][c] == 1) {
+                    grid[r][c] = -1;
+                    q.push({r, c});
+                    break;
+                }
+            }
+            if (!q.empty()) break;
+        }
+
+        const int dr[4] = {-1, 1, 0, 0};
+        const int dc[4] = {0, 0, -1, 1};
+
+        while (!q.empty()) {
+            auto [r, c] = q.front();
+            q.pop();
+
+            for (int d = 0; d < 4; d++) {
+                int nr = r + dr[d];
+                int nc = c + dc[d];
+
+                // Out of grid bounds or water -> contributes 1 to perimeter
+                if (nr < 0 || nr >= rows || nc < 0 || nc >= cols || grid[nr][nc] == 0) {
+                    perimeter++;
+                }
+                // Unvisited land -> mark visited immediately before pushing to avoid duplicates
+                else if (grid[nr][nc] == 1) {
+                    grid[nr][nc] = -1;
+                    q.push({nr, nc});
+                }
+                // If grid[nr][nc] == -1 (already visited land), do nothing (shared edge)
+            }
+        }
+
+        return perimeter;
+    }
+};
