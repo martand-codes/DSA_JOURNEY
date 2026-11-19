@@ -23,29 +23,35 @@ unvisited land cell corresponds to exactly one island.
 class Solution {
 public:
     int numIslands(vector<vector<char>>& grid) {
-        int islands = 0;
-        for(int i = 0; i < grid.size(); i++) {
-            for(int j = 0; j < grid[0].size(); j++) {
-                if(grid[i][j] == '1') {
-                    islands++;
-                    dfsHelper(i, j, grid);
-                }
+      int row = 0, column = 0;
+      int numberofIslands = 0;
+      for(int i = 0; i < grid.size(); i++) {
+        for(int j = 0; j < grid[0].size(); j++) {
+            if(grid[i][j] == '1') {
+                numberofIslands++;
+                dfs(i, j, grid);
             }
         }
-        return islands;
+      }
+      return numberofIslands;
     }
-    void dfsHelper(int row, int column, vector<vector<char>>& grid) {
-        int r = grid.size();
-        int c = grid[0].size();
-        // Base Case
-        if(row < 0 || row >= r || column < 0 || column >= c || grid[row][column] == '0') {
+
+    void dfs(int row, int column, vector<vector<char>> &grid) {
+    
+        // Base Case:
+        if (row < 0 || row >= grid.size() || column < 0 || column >= grid[0].size()) {
             return;
         }
-        grid[row][column] = '0'; // Marked the First element 
-        dfsHelper(row + 1, column, grid); // Down
-        dfsHelper(row - 1, column, grid); // Up
-        dfsHelper(row, column + 1, grid); // Right
-        dfsHelper(row, column - 1, grid); // Left
-        
+        if(grid[row][column] == '0') {
+            return;
+        }
+        grid[row][column] = '0';
+        dfs(row + 1, column, grid);
+        dfs(row - 1, column, grid);
+        dfs(row, column + 1, grid);
+        dfs(row, column - 1, grid); 
     }
 };
+
+
+
