@@ -29,4 +29,4 @@ A structured repository for documenting Data Structures and Algorithms practice.
 | Arrays | 16 |
 | Intervals | 7 |
 | Binary Search | 4 |
-| SQL | 19 | 
+| SQL | 22 | 
